@@ -1,0 +1,64 @@
+GET http://localhost:3001/users
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY3MzU1NjE3OSwiZXhwIjoxNjczNTU5Nzc5fQ.n9ukqrowbA273aTdOi6T7BlQHEy1RtvvpAPJ31jQVuo
+
+###
+
+POST http://localhost:3001/users
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY3MzU1NjE3OSwiZXhwIjoxNjczNTU5Nzc5fQ.n9ukqrowbA273aTdOi6T7BlQHEy1RtvvpAPJ31jQVuo
+
+{
+  "email": "test",
+  "username": "test",
+  "password": "test",
+  "RoleId": 2
+}
+
+###
+
+GET http://localhost:3001/reminders
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY3MzU1MDQwNywiZXhwIjoxNjczNTU0MDA3fQ.OuW3lXjcuW9vAF-gJ8LVDwAUnIkaIznNFvi8e222WjI
+
+###
+
+POST http://localhost:3001/reminders
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY3MzU1NjE3OSwiZXhwIjoxNjczNTU5Nzc5fQ.n9ukqrowbA273aTdOi6T7BlQHEy1RtvvpAPJ31jQVuo
+
+{
+  "title": "my reminder 2",
+  "description": "my reminder 2"
+}
+
+###
+
+PUT http://localhost:3001/reminders/2
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY3MzU1MTY3NywiZXhwIjoxNjczNTU1Mjc3fQ.1-0LDwq84m26ih1oUFLWYdUvcH6-JWPycFe5GwjG9fg
+
+{
+  "title": "my reminder update",
+  "description": "my reminder update"
+}
+
+### AUTH
+
+POST http://localhost:3001/auth/register
+Content-Type: application/json
+
+{
+  "email": "admin2",
+  "username": "admin2",
+  "password": "admin2",
+  "RoleId": 2
+}
+
+###
+
+POST http://localhost:3001/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin"
+}
