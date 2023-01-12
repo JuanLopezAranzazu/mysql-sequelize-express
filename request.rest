@@ -17,7 +17,7 @@ x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ
 ###
 
 GET http://localhost:3001/reminders
-x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY3MzU1MDQwNywiZXhwIjoxNjczNTU0MDA3fQ.OuW3lXjcuW9vAF-gJ8LVDwAUnIkaIznNFvi8e222WjI
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY3MzU1NzY5MywiZXhwIjoxNjczNTYxMjkzfQ.SQZWcNBgTjSORrMT-P7SVoWrC7k5SV1AVIZw3c0uQEI
 
 ###
 
@@ -62,3 +62,8 @@ Content-Type: application/json
   "username": "admin",
   "password": "admin"
 }
+
+### 
+
+GET http://localhost:3001/auth/auth
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY3MzU2MDQ4MSwiZXhwIjoxNjczNTY0MDgxfQ.hyFhG3sdxswM8uwi8D_StsJjK_zEJzK33-UHIfBqt_8

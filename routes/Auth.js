@@ -5,6 +5,7 @@ const jwt = require("jsonwebtoken");
 // models
 const { Users, Roles } = require("./../models/index");
 // middlewares
+const { verifyToken } = require("./../middlewares/Auth");
 const { hash, verify } = require("./../middlewares/Password");
 const { checkExistingUser } = require("./../middlewares/CheckUser");
 
@@ -71,6 +72,10 @@ router.post("/register", checkExistingUser, async (req, res, next) => {
   } catch (error) {
     next(error);
   }
+});
+
+router.get("/auth", verifyToken, (req, res) => {
+  res.json(req.user);
 });
 
 module.exports = router;
